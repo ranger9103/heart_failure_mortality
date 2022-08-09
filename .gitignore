@@ -1,3 +1,6 @@
+data_comorbid_nolabs.csv
+data_with_comorbidities.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
