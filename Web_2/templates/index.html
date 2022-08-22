@@ -1,40 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>Heart Failure</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
+        <!-- Our CSS -->
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- JS -->
+        <script type="text/javascript" src="static/js/logic.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+        
+        /* Full height image header */
+        .bgimg-1 {
+          background-position: center;
+          background-size: cover;
+          background-image: url("/w3images/mac1.jpg");
+          min-height: 50%;
+        }
+        
+        .w3-bar .w3-button {
+          padding: 16px;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+          <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide">Home</a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+              <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-heartbeat"></i>ABOUT</a>
+              <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-address-card"></i> TEAM</a>
+              <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i> WORK</a>
+              <a href="#predict" class="w3-bar-item w3-button"><i class="fa fa-book"></i> Predict Mortality</a>
+              <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-bar-chart"></i> Tableau</a>
+              <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-book"></i> Results</a>
+        
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+          <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+          <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+          <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+          <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Tableau</a>
+          <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Results</a>
+        </nav>
+        
+        <!-- Header with full-height image -->
+        <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+          <div class="w3-display-left w3-text-DarkBlue" style="padding:48px">
+            <span class="w3-jumbo w3-hide-small w3-text-DarkBlue text-shadow: 1px 1px w3-white">Heart Failure</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">In-Hospital Mortality</span><br>
+            <span class="w3-large w3-text-DarkBlue text-shadow: 1px 1px w3-white">Heart failure accounts for over 30 billion healthcare dollars annually and almost 400,000 deaths in the United States.</span><br>
+            <span class="w3-large w3-text-DarkBlue text-shadow: 1px 1px w3-white">Join us on a journey through some contributing factors.</span>
+        
+        </header>
 
-<head>
-    <meta charset="utf-8">
-    <title>TITANIC ML</title>
-    <!-- Boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
-    <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- JS -->
-    <script type="text/javascript" src="static/js/logic.js"></script>
-
-</head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Titanic
-                <span class="sr-only">(current)</span>
-              </a>
-                </li>
-            </ul>
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+    <h3 class="w3-center">THE TEAM</h3>
+    <p class="w3-center w3-large">Data Analysis and Visualization Bootcamp 2022: Captstone Group 2</p>
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="/w3images/LalitT.jpg" alt="Lalit" style="width:25%">
+          <div class="w3-container">
+            <h3>Lalit Toshniwal</h3>
+            <p class="w3-opacity">Director of Global Raw Materials</p>
+            <p>As the Director of Global Raw Materials Lalit provides leadership to the raw materials engineering and sourcing teams to meet consumer demand and deliver optimal financial outcomes.</p>
+          </div>
         </div>
-    </nav>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="/w3images/lindsayteeters2022.jpg" alt="Lindsay" style="width:25%">
+          <div class="w3-container">
+            <h3>Linsay Teeters</h3>
+            <p class="w3-opacity">Financial Analyst</p>
+            <p>Lindsay is a Finance Analyst and provides reporting and analytics to leadership through the Mayo Clinic Health Systems.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="/w3images/Nick.jpeg" alt="Nick" style="width:25%">
+          <div class="w3-container">
+            <h3>Nick Petcoff</h3>
+            <p class="w3-opacity">Financial Analyst</p>
+            <p>Nick works in research finance as an analyst with prior experience as an auditor and staff accountant.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="/w3images/Kate.jpg" alt="Kate" style="width:25%">
+          <div class="w3-container">
+            <h3>Kate Heise</h3>
+            <p class="w3-opacity">Nurse Practitioner</p>
+            <p>Kate has a unique role splitting her time between patient care, supervisory responsibilities and data analysis and visualization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Work Section -->
+  <div class="w3-container" style="padding:128px 16px" id="work">
+    <h3 class="w3-center">Machine Learning</h3>
+    <p class="w3-center w3-large">What we did and how cool it is</p>
+  
+    <div class="w3-row-padding" style="margin-top:64px">
+      <div class="w3-col l3 m6">
+        <img src="/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+      </div>
+    </div>
+  
+    <div class="w3-row-padding w3-section">
+      <div class="w3-col l3 m6">
+        <img src="/w3images/Diagram.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="ERD">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
 
-    <a href="/about_us">About Us</a>
+
     <hr style="color:lightgray; border-width: 3px;">
     <div class="container">
         <div class="card border-primary mb-3" style="max-width: 20rem;">

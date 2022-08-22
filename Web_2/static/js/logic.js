@@ -41,9 +41,9 @@ function makePredictions() {
             console.log(returnedData);
 
             if (returnedData["prediction"] === "1") {
-                $("#output").text("You Survived!");
+                $("#output").text("Survival is likely.");
             } else {
-                $("#output").text("You did not survive, sorry. :(");
+                $("#output").text("Survival is unlikely.");
             }
 
         },
