@@ -1,7 +1,9 @@
 
 
 <h1 align="center"><u>Heart Failure Mortality</u></h1>
-<align="center"> Group 2
+<p align="center">
+// Group 2: Kate Heise, Nick Petcoff, Lalit Toshniwal, & Lindsay Teeters 
+</p>
 
 
 
