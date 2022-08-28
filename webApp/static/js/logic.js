@@ -26,16 +26,16 @@ function makePredictions() {
 
     // create the payload
     var payload = {
-        "aniongap": aniongap,
-        "bicarb": bicarb,
-        "lactate": lactate,
-        "leucocyte": leucocyte,
-        "urine": urine,
-        "RDW": rdw,
-        "inr": inr,
-        "Comorbidities": comorbidities,
-        "sbp": sbp,
-        "dbp": dbp
+        'Anion': aniongap,
+        'Bicarb': bicarb,
+        'Lactate': lactate,
+        'Leucocyte': leucocyte,
+        'Urine': urine,
+        'rdw': rdw,
+        'inr': inr,
+        'comorbidities': comorbidities,
+        'sbp': sbp,
+        'dbp': dbp
     }
 
     // Perform a POST request to the query URL
@@ -48,10 +48,12 @@ function makePredictions() {
             // print it
             console.log(returnedData);
 
-            if (returnedData["prediction"] === "0") {
+            if (returnedData["prediction"] == "0.0") {
                 $("#output").text("Survival is likely.");
-            } else {
+            } else if (returnedData["prediction"] == "1.0") {
                 $("#output").text("Survival is unlikely.");
+            } else {
+                $("#output").text(returnedData["prediction"]);
             }
 
         },

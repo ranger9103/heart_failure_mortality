@@ -22,9 +22,13 @@ class ModelHelper():
     def __init__(self):
         pass
 
-    def makePredictions(self, aniongap, bicarb, lactate, leucocyte, urine, rdw, inr, comorbidities, sbp, dbp):
+    def makePredictions(self, Anion_gap, Bicarbonate, Lactic_acid, Leucocyte,
+       Urine_output, RDW, INR, Comorbidities,
+       Systolic_blood_pressure, Diastolic_blood_pressure):
 
-        input_pred = [[aniongap, bicarb, lactate, leucocyte, urine, rdw, inr, comorbidities, sbp, dbp]]
+        input_pred = [[Anion_gap, Bicarbonate, Lactic_acid, Leucocyte,
+       Urine_output, RDW, INR, Comorbidities,
+       Systolic_blood_pressure, Diastolic_blood_pressure]]
 
         # load final model
         filename = 'MortalityPredict_ExtraTreesClassifier.sav'
@@ -40,4 +44,4 @@ class ModelHelper():
         X = sc.transform(X)
 
         preds_singular = et.predict(X)
-        preds_singular[0]
+        return preds_singular[0]

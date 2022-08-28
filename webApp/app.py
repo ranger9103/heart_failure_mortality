@@ -14,25 +14,26 @@ def home():
     # Return template and data
     return render_template("index.html")
 
-
 @app.route("/makePredictions", methods=["POST"])
 def make_predictions():
     content = request.json["data"]
     print(content)
     
     # parse
-    aniongap = int(content["aniongap"])
-    bicarb = float(content["bicarb"])
-    lactate = float(content["lactate"])
-    leucocyte = int(content["leucocyte"])
-    urine = int(content["urine"])
-    rdw = float(content["RDW"])
-    inr = float(content["inr"])
-    comorbidities = int(content["Comorbidities"])
-    sbp = int(content["sbp"])
-    dbp = content["dbp"]
+    RDW = float(content['rdw'])
+    Urine_output = float(content['Urine'])
+    Comorbidities = int(content['comorbidities'])
+    Leucocyte = float(content['Leucocyte'])
+    Anion_gap = float(content['Anion'])
+    Bicarbonate = float(content['Bicarb'])
+    Lactic_acid = float(content['Lactate'])
+    INR = float(content['inr'])
+    Systolic_blood_pressure = float(content['sbp'])
+    Diastolic_blood_pressure = float(content['dbp'])
 
-    preds = modelHelper.makePredictions(aniongap, bicarb, lactate, leucocyte, urine, rdw, inr, comorbidities, sbp, dbp)
+    preds = modelHelper.makePredictions(Anion_gap, Bicarbonate, Lactic_acid, Leucocyte,
+       Urine_output, RDW, INR, Comorbidities,
+       Systolic_blood_pressure, Diastolic_blood_pressure)
     return(jsonify({"ok": True, "prediction": str(preds)}))
 
 
