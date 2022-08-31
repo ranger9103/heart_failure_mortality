@@ -19,4 +19,4 @@
   With this data we explored heart failure and how certain comorbidities and lab results can predict if a patient will survive while in hospital care to discharge, or if the patient died in care. This was completed by first doing an exploratory analysis to determine what factors correlate with the target variable of survival or in hospital death. This review was carried through visualizations utilizing Tableau and running machine learning methods to make predictions on the features with most correlation to the target variable. All of this is presented on a student built website.  
 
 
-Please, check out our [website](https://group2-capstone.herokuapp.com/).
+Please, check out our [website](https://group2-capstone.herokuapp.com/). 
