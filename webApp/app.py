@@ -14,12 +14,17 @@ def home():
     # Return template and data
     return render_template("index.html")
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 35b380c9f5314a8fb23d136d0abb3b49e871a7a6
 @app.route("/makePredictions", methods=["POST"])
 def make_predictions():
     content = request.json["data"]
     print(content)
     
     # parse
+<<<<<<< HEAD
     RDW = float(content['rdw'])
     Urine_output = float(content['Urine'])
     Comorbidities = int(content['comorbidities'])
@@ -34,6 +39,20 @@ def make_predictions():
     preds = modelHelper.makePredictions(Anion_gap, Bicarbonate, Lactic_acid, Leucocyte,
        Urine_output, RDW, INR, Comorbidities,
        Systolic_blood_pressure, Diastolic_blood_pressure)
+=======
+    aniongap = int(content["aniongap"])
+    bicarb = float(content["bicarb"])
+    lactate = float(content["lactate"])
+    leucocyte = int(content["leucocyte"])
+    urine = int(content["urine"])
+    RDW = float(content["RDW"])
+    inr = float(content["inr"])
+    Comorbidities = int(content["Comorbidities"])
+    sbp = int(content["sbp"])
+    dbp = content["dbp"]
+
+    preds = modelHelper.makePredictions(aniongap, bicarb, lactate, leucocyte, urine, RDW, inr, Comorbidities, sbp, dbp)
+>>>>>>> 35b380c9f5314a8fb23d136d0abb3b49e871a7a6
     return(jsonify({"ok": True, "prediction": str(preds)}))
 
 

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heart Failure</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/mac1.jpg");
+  min-height: 50%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Home</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-heartbeat"></i>ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-address-card"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i> WORK</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-bar-chart"></i> Tableau</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-book"></i> Results</a>
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Tableau</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Results</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-DarkBlue" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small w3-text-DarkBlue text-shadow: 1px 1px w3-white">Heart Failure</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">In-Hospital Mortality</span><br>
+    <span class="w3-large w3-text-DarkBlue text-shadow: 1px 1px w3-white">Heart failure accounts for over 30 billion healthcare dollars annually and almost 400,000 deaths in the United States.</span><br>
+    <span class="w3-large w3-text-DarkBlue text-shadow: 1px 1px w3-white">Join us on a journey through some contributing factors.</span>
+
+</header>
+
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+  <p class="w3-center w3-large">Data Analysis and Visualization Bootcamp 2022: Captstone Group 2</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team2.jpg" alt="Lalit" style="width:100%">
+        <div class="w3-container">
+          <h3>Lalit Toshniwal</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team1.jpg" alt="Lindsay" style="width:100%">
+        <div class="w3-container">
+          <h3>Linsay Teeters</h3>
+          <p class="w3-opacity">Art Director</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/Nick.jpeg" alt="Nick" style="width:25%">
+        <div class="w3-container">
+          <h3>Nick Petcoff</h3>
+          <p class="w3-opacity">Financial Analyst</p>
+          <p>Nick works in research finance as an analyst with prior experience as an auditor and staff accountant.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/Kate.jpg" alt="Kate" style="width:25%">
+        <div class="w3-container">
+          <h3>Kate Heise</h3>
+          <p class="w3-opacity">Nurse Practitioner</p>
+          <p>Kate has a unique role splitting her time between patient care, supervisory responsibilities and data analysis and visualization.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">Machine Learning</h3>
+  <p class="w3-center w3-large">What we did and how cool it is</p>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="/w3images/Diagram.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="ERD">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Tableau Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:78px 16px" id="pricing">
+  <h3 class=>Tableau</h3>
+  <p class="w3-large" >Welcome to the Interactive Heart Failure Dashaboards</p>
+  <div class="w3-row-padding w3-center" >
+    <div class='tableauPlaceholder' id='viz1660250868583' style='position: relative'><noscript><a href='#'><img alt='Hospital Mortality: Comorbidities ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;He&#47;HeartFailureandComorbidities&#47;HospitalMortalityComorbidities&#47;1_rss.png' style='border: none' /></a></noscript>
+      <object class='tableauViz'  style='display:none;'>
+      <img class="shrinkToFit" alt=[the image location] src=[the image location] height="300" width="225">
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+      <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+      <param name='name' value='HeartFailureandComorbidities&#47;HospitalMortalityComorbidities' />
+      <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;He&#47;HeartFailureandComorbidities&#47;HospitalMortalityComorbidities&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1660250868583');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1277px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CapstoneProject-HeartFailure8_8_22-InProgress&#47;HeartFailureDashboard&#47;1.png' /> 
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' /></object>
+    </div> <br> 
+    <div class='tableauPlaceholder' id='viz1660060006535' style='position: relative'><noscript><a href='#'><img alt='Heart Failure in Hospital Mortality ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CapstoneProject-HeartFailure8_8_22-InProgress&#47;HeartFailureDashboard&#47;1_rss.png' style='border: none' /></a></noscript>
+      <object class='tableauViz'  style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+      <param name='embed_code_version' value='3' /> 
+      <param name='site_root' value='' />
+      <param name='name' value='CapstoneProject-HeartFailure8_8_22-InProgress&#47;HeartFailureDashboard' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <img class="shrinkToFit" alt=[the image location] src=[the image location] height="300" width="225">
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CapstoneProject-HeartFailure8_8_22-InProgress&#47;HeartFailureDashboard&#47;1.png' /> 
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' /></object>
+    </div>               
+    <script type='text/javascript'>                    var divElement = document.getElementById('viz1660060006535');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1300px';vizElement.style.height='1027px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1300px';vizElement.style.height='1027px';} else { vizElement.style.width='100%';vizElement.style.height='1727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+  </div>
+</div>
+
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+    <h3 class="w3-center">The Write Up</h3>
+    <p class="w3-center w3-large">Well that was a lot of work</p>
+    <div class="w3-col m6">
+      <h3>Our Results column 1</h3>
+      <p>With analysis of the data set we were able to correlate xyz with in-hospital mortality.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-col m6">
+      <h3>Our Results column 2</h3>
+      <p>With analysis of the data set we were able to correlate xyz with in-hospital mortality.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
+
+
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
