@@ -3,8 +3,21 @@ import numpy as np
 import pandas as pd
 from collections import Counter
 
+<<<<<<< HEAD
 # tree based algorithms
 from sklearn.ensemble import ExtraTreesClassifier
+=======
+# loading linear algorithms
+from sklearn.linear_model import LogisticRegression
+
+# tree based algorithms
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, ExtraTreesClassifier, GradientBoostingClassifier
+from lightgbm import LGBMClassifier
+from xgboost import XGBClassifier
+from sklearn import svm
+from sklearn.neighbors import KNeighborsClassifier
+>>>>>>> 35b380c9f5314a8fb23d136d0abb3b49e871a7a6
 
 # machine learning processing and metrics
 from sklearn.model_selection import train_test_split
@@ -22,6 +35,7 @@ class ModelHelper():
     def __init__(self):
         pass
 
+<<<<<<< HEAD
     def makePredictions(self, Anion_gap, Bicarbonate, Lactic_acid, Leucocyte,
        Urine_output, RDW, INR, Comorbidities,
        Systolic_blood_pressure, Diastolic_blood_pressure):
@@ -44,4 +58,19 @@ class ModelHelper():
         X = sc.transform(X)
 
         preds_singular = et.predict(X)
+=======
+    def makePredictions(self, aniongap, bicarb, lactate, leucocyte, urine, RDW, inr, Comorbidities, sbp, dbp):
+
+
+        input_pred = [[aniongap, bicarb, lactate, leucocyte, urine, RDW, inr, Comorbidities, sbp, dbp]]
+
+
+        filename = 'Finalized_model.sav'
+        ada_load = pickle.load(open(filename, 'rb'))
+
+        X = np.array(input_pred)
+        preds = ada_load.predict_proba(X)
+        preds_singular = ada_load.predict(X)
+
+>>>>>>> 35b380c9f5314a8fb23d136d0abb3b49e871a7a6
         return preds_singular[0]

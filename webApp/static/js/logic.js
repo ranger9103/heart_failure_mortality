@@ -15,9 +15,15 @@ function makePredictions() {
     var lactate = $("#lactate").val();
     var leucocyte = $("#leucocyte").val();
     var urine = $("#urine").val();
+<<<<<<< HEAD
     var rdw = $("#RDW").val();
     var inr = $("#inr").val();
     var comorbidities = $("#Comorbidities").val();
+=======
+    var RDW = $("#RDW").val();
+    var inr = $("#inr").val();
+    var Comorbidities = $("#Comorbidities").val();
+>>>>>>> 35b380c9f5314a8fb23d136d0abb3b49e871a7a6
     var sbp = $("#sbp").val();
     var dbp = $("#dbp").val();
 
@@ -26,6 +32,7 @@ function makePredictions() {
 
     // create the payload
     var payload = {
+<<<<<<< HEAD
         'Anion': aniongap,
         'Bicarb': bicarb,
         'Lactate': lactate,
@@ -36,6 +43,18 @@ function makePredictions() {
         'comorbidities': comorbidities,
         'sbp': sbp,
         'dbp': dbp
+=======
+        "aniongap": aniongap,
+        "bicarb": bicarb,
+        "lactate": lactate,
+        "leucocyte": leucocyte,
+        "urine": urine,
+        "RDW": RDW,
+        "inr": inr,
+        "Comorbidities": Comorbidities,
+        "sbp": sbp,
+        "dbp": dbp
+>>>>>>> 35b380c9f5314a8fb23d136d0abb3b49e871a7a6
     }
 
     // Perform a POST request to the query URL
@@ -48,12 +67,19 @@ function makePredictions() {
             // print it
             console.log(returnedData);
 
+<<<<<<< HEAD
             if (returnedData["prediction"] == "0.0") {
                 $("#output").text("Survival is likely.");
             } else if (returnedData["prediction"] == "1.0") {
                 $("#output").text("Survival is unlikely.");
             } else {
                 $("#output").text(returnedData["prediction"]);
+=======
+            if (returnedData["prediction"] === "1") {
+                $("#output").text("Survival is likely.");
+            } else {
+                $("#output").text("Survival is unlikely.");
+>>>>>>> 35b380c9f5314a8fb23d136d0abb3b49e871a7a6
             }
 
         },
