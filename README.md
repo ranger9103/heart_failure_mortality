@@ -5,7 +5,7 @@
   <b>Group 2: </b>Kate Heise, Nick Petcoff, Lalit Toshniwal, & Lindsay Teeters 
 </p>
 
-
+https://group2-capstone.herokuapp.com/
 
 <p align="center">
   <img width="300" src="https://media.giphy.com/media/26n6OmfaR7wr0iXqU/giphy.gif">
